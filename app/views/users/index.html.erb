@@ -1,0 +1,19 @@
+<div class="container">
+	
+
+<% if signed_in? %>
+<% @users.each do |user| %>
+<%= link_to user.username, user  %><br>
+User Since: <%= user.created_at %><br>
+Links Posted: <%= user.links.count %><br>
+<br><br>
+<% end %>
+
+<% else %>
+
+You need to sign in to see users
+
+<% end %>
+
+
+</div>

@@ -1,0 +1,21 @@
+
+<div class="container">
+<div class="row">
+
+	<div class="col-8">
+Email: <%= @user.email %><br>
+Member Since: <%= @user.created_at %><br>
+Last Logged In: <%= @user.last_sign_in_at %><br>
+<%= render 'shared/stats' %>
+
+<% if current_user == @user %>
+
+<% else %>
+<%= render 'follow_form' if signed_in? %>
+<% end %>
+</div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+<div class="row">
+  <div class="col-4">
+      <h1><%= @user.username %></h1>
+      <span><%= link_to "View profile", @user %></span>
+      <span><b>Links:</b> <%= @user.links.count %></span>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+</div>
+<div class="col-4">
+      <% if @users.any? %>
+       
+          <% @users.each do |user| %>
+           <%= link_to user.username, user %><br>
+          <% end %>
+   
+      <% end %>
+  
+  </div> 
+</div>
+</div>
