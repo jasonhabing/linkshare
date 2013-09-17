@@ -1,5 +1,5 @@
 
-<br><br>
+<br><br><br>
 <% if @feedlinks.empty? %>
 You don't see anything here because you don't follow anyone and you haven't posted any links.  <%= link_to 'Find users to follow', '/users' %> or post a link in the form to your right.
 <% else %>
@@ -14,7 +14,7 @@ You don't see anything here because you don't follow anyone and you haven't post
   </div>
  <div id="feed-url"> Votes: <%= link.up_votes - link.down_votes %></div>
 </div>
-<div class="col-xs-10">
+<div class="col-xs-10" >
   <b><a href="<%= link.url %>" id="feeditem"><%= link.title %></a></b><br>
   <div id="feed-url">
   <%= link.url %><br>
