@@ -1,3 +1,5 @@
+
+<br><br>
 <% if @feedlinks.empty? %>
 You don't see anything here because you don't follow anyone and you haven't posted any links.  <%= link_to 'Find users to follow', '/users' %> or post a link in the form to your right.
 <% else %>
@@ -5,14 +7,14 @@ You don't see anything here because you don't follow anyone and you haven't post
 <% @feedlinks.each do |link| %>
 <% linkowner = link.user %>
 
-<div class="col-2">
+<div class="col-xs-2">
   <div id="voting-links"><br>
   <%= link_to('Vote Up', vote_up_link_path(link), :method => :post )%><br>
   <% link_to('Vote Down', vote_down_link_path(link), :method => :post )%>
   </div>
  <div id="feed-url"> Votes: <%= link.up_votes - link.down_votes %></div>
 </div>
-<div class="col-10">
+<div class="col-xs-10">
   <b><a href="<%= link.url %>" id="feeditem"><%= link.title %></a></b><br>
   <div id="feed-url">
   <%= link.url %><br>

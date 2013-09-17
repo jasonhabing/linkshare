@@ -15,6 +15,8 @@ gem 'pismo'
 gem 'make_voteable'
 gem 'rake', '10.1.0'
 
+ruby '2.0.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
